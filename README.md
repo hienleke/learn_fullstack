@@ -38,11 +38,11 @@ api test :
 ```
 | Method   | URL                                      | Description                              |
 | -------- | ---------------------------------------- | ---------------------------------------- |
-| `GET`    | `http://localhost:3000/users`                                 | Retrieve all users.                      |
-| `POST`   | `http://localhost:3000/users`                                 | Create a new users.                      |
-| `PUT`    | `http://localhost:3000/users/id`                              | Update by id.                            |
-| `DELETE` | `http://localhost:3000/users/id`                              | Delete by id.                            |
-| `GET`    | `http://localhost:3000/users/id`                              | Get detail.                              |
+| `GET`    | `http://localhost:3000/users`            | Retrieve all users.                      |
+| `POST`   | `http://localhost:3000/users`            | Create a new users.                      |
+| `PUT`    | `http://localhost:3000/users/{id}`       | Update by id.                            |
+| `DELETE` | `http://localhost:3000/users/{id}`       | Delete by id.                            |
+| `GET`    | `http://localhost:3000/users/{id}`       | Get detail.                              |
 ```
 
 body create new user example
@@ -62,7 +62,7 @@ python proxy_script.py
 Proxy server will run on port 5000
 
 **3.Start django_server (Django Server):**
-``
+```
 pip install -r requirements.txt
 
 python manage.py createsuperuser
@@ -75,15 +75,16 @@ python manage.py runserver
 
 ```
 
+Login with username password that you created 
 
 ```
-Login http://localhost:8000/admin with user that create by createsuperuser
-```
+http://localhost:8000/admin 
 
-call this
 ```
+call this to get all user data from express server
+``
  http://localhost:8000/get_user_data/    
- to get all user data from express server
+
 ```
 
 
