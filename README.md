@@ -2,10 +2,11 @@
 
 
 # Project Name
-
+```
 django_server : CRUD_product sqlite and call api get user through proxy python script.
 proxy_python : proxy script.
 express_servser : CRUD_user sqlite
+```
 
 ## Project Structure Over view
 ```
@@ -29,6 +30,7 @@ To run the project, follow these steps:
 
 **1. Start `express_server` (Express.js Server):**
 ```
+cd express_server
 npm install
 npm run dev
 ```
@@ -63,6 +65,8 @@ Proxy server will run on port 5000
 
 **3.Start django_server (Django Server):**
 ```
+cd django_server
+
 pip install -r requirements.txt
 
 python manage.py createsuperuser
