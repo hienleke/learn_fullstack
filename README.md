@@ -57,7 +57,7 @@ express server will run on port 3000
 **2. Start proxy script:**
 ```
 cd python_proxy
-python proxy_script.py
+python proxy.py
 ```
 Proxy server will run on port 5000
 
@@ -83,7 +83,7 @@ http://localhost:8000/admin
 ```
 call this to get all user data from express server
 ```
- http://localhost:8000/get_user_data/    
+ http://localhost:8000/get_user_data/  
 
 ```
 
