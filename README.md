@@ -3,25 +3,19 @@
 
 # Project Name
 ```
-django_server : CRUD_product sqlite and call api get user through proxy python script.
-proxy_python : proxy script.
 express_servser : CRUD_user sqlite
 ```
 
 ## Project Structure Over view
 ```
 root_project/
-├── django_server/
-│ ├── myproject/
-│ ├── product/
 ├── express_server/
 | ├── config/
 │ ├── controllers/
 │ ├── model/
 │ ├── router/
 | ├── app.js
-├── python_proxy/
-│ ├── proxy_script.py
+├── react-frontend/
 ```
 
 ## Installation and Usage
@@ -55,44 +49,4 @@ body create new user example
 }
 ```
 express server will run on port 3000
-
-**2. Start proxy script:**
-```
-cd python_proxy
-python proxy.py
-```
-Proxy server will run on port 5000
-
-**3.Start django_server (Django Server):**
-```
-cd django_server
-
-pip install -r requirements.txt
-
-python manage.py createsuperuser
-
-python manage.py makemigrations
-
-python manage.py migrate
-
-python manage.py runserver
-
-```
-
-Login with username password that you created 
-
-```
-http://localhost:8000/admin 
-
-```
-call this to get all user data from express server
-```
- http://localhost:8000/get_user_data/  
-
-```
-
-
-
-django server will run on port 8000
-
 
