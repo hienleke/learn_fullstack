@@ -5,7 +5,6 @@ const  User = require('../models/User.js');
 const createUser = async (req, res) => {
     try {
        
-    let { username, email } = req.body;
     const user = await User.create({ username, email });
     res.status(201).json(user);
   } catch (error) {
@@ -17,6 +16,7 @@ const createUser = async (req, res) => {
 const getAllUsers = async (req, res) => {
     try {
       console.log(" user ", User)
+      console.log(` body :  ${req.body}  query :  ${req.query} `);
     const users = await User.findAll({});
     res.json(users);
   } catch (error) {
