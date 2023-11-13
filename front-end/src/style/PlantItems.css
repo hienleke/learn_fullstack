@@ -1,7 +1,9 @@
 .jh-plant-item-cover {
-	height: 220px;
-	width: 220px;
+	height: 100%;
+	width: 100%;
+	display: block;
 	border-radius: 20px;
+	object-fit: cover;
 }
 
 .jh-plant-item {
@@ -11,4 +13,16 @@
 	justify-content: center;
 	flex-direction: column;
 	text-transform: capitalize;
+	position: relative;
+}
+
+.jh-plant-item-price {
+	position: absolute;
+	border-radius: 20px 20px 20px 0;
+	background-color: #31b472;
+	color: white;
+	padding: 15px;
+	right: 0;
+	top: 0;
+	font-weight: 500;
 }

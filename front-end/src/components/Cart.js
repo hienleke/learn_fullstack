@@ -4,9 +4,7 @@ import '../style/Cart.css'
 function Cart({cart, updateCart}) {
 	const  monsteraPrice = 8
 	const [isOpen, setIsOpen] = useState(true)
-	const va = useState(1);
-
-
+	
 	function clearCart()
 	{
 		updateCart(0);

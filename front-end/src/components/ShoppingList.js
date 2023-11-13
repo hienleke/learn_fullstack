@@ -6,8 +6,8 @@ function ShoppingList({ updateCart}) {
         <div>
           <ul className='jh-plant-list' >
                 {plantList.map(
-                    ({id , cover , name ,water , light}) => (
-                        <PlantItem id={id} name={name} cover={cover} water={water} light={ light} />
+                    ({id , cover , name ,water , light, price}) => (
+                        <PlantItem id={id} name={name} cover={cover} water={water} light={light} price={price}  />
                     ))
                }
                 
