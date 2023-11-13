@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import React, { useState } from "react";
 import './App.css';
+import Banner from './components/Banner';
+import Cart from './components/Cart';
+import logo from './assets/logo.png'
+import ShoppingList from "./components/ShoppingList";
+import Footer from "./components/Footer";
+import './style/Layout.css'
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  const [cart, updateCart] = useState({})
+ 
+  return (<div>
+
+    <Banner    > 
+    <img src={logo} alt='Jungle House' />
+    <h1 className='jh-title'>Jungle House</h1>
+    </Banner>
+    <div className='jh-layout-inner'>
+				<Cart />
+      <ShoppingList updateCart={updateCart} />
+			</div>
+    <Footer />
+  </div> )
 }
 
 export default App;

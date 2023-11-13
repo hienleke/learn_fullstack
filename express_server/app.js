@@ -1,28 +1,15 @@
 const express = require('express');
-const sequelize = require('./config/database'); // Import your database configuration
+const { graphqlHTTP } = require('express-graphql');
+const { buildSchema } = require('graphql');
+
 const app = express();
 
-// Middleware setup
-app.use(express.json());
+app.use('/graphql', graphqlHTTP({
+  schema: buildSchema(yourGraphQLSchema),
+  rootValue: resolvers,
+  graphiql: true, // Enable the GraphiQL UI for testing
+}));
 
-// Import the User model and the User router
-const User = require('./models/User');
-const userRouter = require('./routers/users');
-
-// Use the user router
-app.use('/users', userRouter);
-
-// Start the server
-const PORT = process.env.PORT || 3000;
-
-sequelize
-  .sync() // Sync the database
-  .then(() => {
-    console.log('Database synchronized');
-    app.listen(PORT, () => {
-      console.log(`Server is running on port ${PORT}`);
-    });
-  })
-  .catch((error) => {
-    console.error('Error synchronizing database:', error);
-  });
+app.listen(4000, () => {
+  console.log('Server is running on port 4000');
+});
