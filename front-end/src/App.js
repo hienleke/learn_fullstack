@@ -36,7 +36,7 @@ function App() {
   console.log(" mounted");
   
 	return (
-		<div>
+		<div className='container'>
 			<Banner>
 				<img src={logo} alt='Jungle House' className='jh-logo' />
 				<h1 className='jh-title'>Jungle House</h1>
