@@ -1,16 +1,18 @@
-const { Sequelize } = require('sequelize');
-const SQLite = require('sqlite3');
+// database.js
+const { Sequelize } = require("sequelize");
 
+// Replace the following URL with your PostgreSQL connection details
+const sequelize = new Sequelize("postgres://zmqmvral:3bTWDtPebSI0M12iFx3Wa_h9pq2PoKwO@rosie.db.elephantsql.com/zmqmvral");
 
-const sequelize = new Sequelize({
-  dialect: 'sqlite', // Replace with your database dialect (e.g., mysql, postgres, etc.)
-  storage: '../database.sqlite', // Specify your database file path
-  // Additional database configuration options go here
-  dialectOptions: {
-    // Your sqlite3 options here
-    // for instance, this is how you can configure the database opening mode:
-    mode: SQLite.OPEN_READWRITE | SQLite.OPEN_CREATE | SQLite.OPEN_FULLMUTEX,
-  },
-});
+// Test the connection
+async function testConnection() {
+     try {
+          await sequelize.authenticate();
+          console.log("Connection to the database has been established successfully.");
+     } catch (error) {
+          console.error("Unable to connect to the database:", error);
+     }
+}
 
-module.exports = sequelize;
+// Export the Sequelize instance
+module.exports = { sequelize, testConnection };
