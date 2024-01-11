@@ -7,7 +7,6 @@ var connection;
 // Kết nối RabbitMQ
 async function connectRabbitMQ() {
      try {
-          connection = await amqp.connect("amqps://zzelcqqc:po4UULPginCZwyspR8JhJ730abutkKJo@cougar.rmq.cloudamqp.com/zzelcqqc");
           console.info("connect to RabbitMQ success");
 
           const channel = await connection.createChannel();
