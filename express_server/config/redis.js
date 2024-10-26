@@ -1,10 +1,11 @@
-import { createClient } from "redis";
+const { createClient } = require("redis");
+const config = require("config");
 
 const redisClient = createClient({
-     password: "JieHhyVIEkwFavB738fASk1f1okuVR4j",
+     password: config.get("redis.password"),
      socket: {
-          host: "redis-13816.c290.ap-northeast-1-2.ec2.cloud.redislabs.com",
-          port: 13816,
+          host: config.get("redis.host"),
+          port: config.get("redis.port"),
      },
 });
 
@@ -16,5 +17,6 @@ redisClient.on("error", (error) => {
      console.error("Error connecting to Redis:", error);
 });
 
+redisClient.connect();
 // Export the Redis client
 module.exports = redisClient;

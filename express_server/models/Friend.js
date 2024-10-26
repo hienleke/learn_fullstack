@@ -1,5 +1,5 @@
 const { Sequelize, DataTypes } = require("sequelize");
-const sequelize = require("../config/database");
+const { sequelize } = require("../config/database");
 // Define the Friend model without 'id' field
 const Friend = sequelize.define(
      "Friend",
@@ -23,8 +23,4 @@ const Friend = sequelize.define(
      }
 );
 
-// Sync the model with the database (creates the table if it doesn't exist)
-(async () => {
-     await sequelize.sync({ force: true }); // Use { force: true } to drop and recreate the table
-     console.log("Friend model synchronized with database.");
-})();
+module.exports = Friend;

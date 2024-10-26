@@ -1,0 +1,24 @@
+{
+     "rabbitmq": {
+          "url": "amqps://ekwyivfc:wdVBeK_uybCpRJ1vS7wPWxSRR4O5g_A7@octopus.rmq3.cloudamqp.com/ekwyivfc",
+          "QueueName": {
+               "topic": "topic",
+               "direct": "direct",
+               "fanout": "fanout",
+               "header": " header"
+          }
+     },
+     "redis": {
+          "host": "redis-18739.c277.us-east-1-3.ec2.redns.redis-cloud.com",
+          "port": 18739,
+          "password": "dxRHuzsNiwPrShMdHHPUpi3AqT1eVK2l"
+     },
+     "postgres": {
+          "url": "postgres://zmqmvral:3bTWDtPebSI0M12iFx3Wa_h9pq2PoKwO@rosie.db.elephantsql.com/zmqmvral"
+     },
+     "key": {
+          "leaderboard": "leaderboard",
+          "players": "players",
+          "game": "game"
+     }
+}

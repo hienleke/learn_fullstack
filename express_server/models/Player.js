@@ -1,5 +1,5 @@
 const { Sequelize, DataTypes } = require("sequelize");
-const sequelize = require("../config/database");
+const { sequelize } = require("../config/database");
 
 const Player = sequelize.define(
      "Player",
@@ -40,8 +40,4 @@ const Player = sequelize.define(
      }
 );
 
-// Sync the model with the database (creates the table if it doesn't exist)
-(async () => {
-     await sequelize.sync({ force: true }); // Use { force: true } to drop and recreate the table
-     console.log("Player model synchronized with database.");
-})();
+module.exports = Player;
