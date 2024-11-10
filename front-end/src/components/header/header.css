@@ -1,0 +1,58 @@
+/* Header.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.button-nav-1{
+  border-radius: 2px;
+  background: #5656c2;
+}
+
+.button-nav-2{
+  border-radius: 2px;
+  background: #ff4742;
+}
+
+.search-bar{
+
+}
+
+.search{
+
+}
+
+.nav {
+  flex : 1;
+  display: flex;
+  gap: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-content{
+  flex : 4;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
