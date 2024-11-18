@@ -14,8 +14,11 @@
 
 .title {
   font-size: 1.5rem;
+ 
 }
-
+.title:hover {
+  filter: blur(5px); /* Adjust the blur amount here */
+}
 .button-nav {
 height: 30px;
 width: 150px;
