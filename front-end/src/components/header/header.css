@@ -96,7 +96,6 @@ border-radius: 15px;
   position: absolute;
   left: 10px; /* Position the icon inside the input */
   top: 50%;
-  transform: translateY(-50%); /* Vertically center the icon */
   font-size: 18px; /* Adjust the icon size */
   color: #888; /* Set icon color */
 }

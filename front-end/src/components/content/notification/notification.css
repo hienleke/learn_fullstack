@@ -1,0 +1,14 @@
+/* src/components/Content.css */
+
+.notification {
+    display: flex;
+    flex-direction: column;
+    padding: 20%;
+  }
+  
+.notification-text{
+
+}
+.logos{
+  display: flex;
+}
