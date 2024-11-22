@@ -4,6 +4,8 @@ main {
     padding: 20px;
   }
   
-.content{
-
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }

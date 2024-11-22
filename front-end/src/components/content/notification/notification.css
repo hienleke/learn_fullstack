@@ -3,12 +3,31 @@
 .notification {
     display: flex;
     flex-direction: column;
-    padding: 20%;
+    padding: 10px;
+    max-width: 70%;
+
   }
   
 .notification-text{
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  align-items: center;
+  font-size: 16px; /* Set the size of the text */
+  padding: 10px 20px; /* Add padding to improve appearance */
+  text-align: center; 
+  display: block;
 
 }
-.logos{
+.logos {
   display: flex;
+  flex-wrap: wrap; /* Allow images to wrap if needed */
+  gap: 10px; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.logos img {
+  width: 100px; height: 100px; object-fit: contain;
+  filter: saturate(0%) brightness(61%) contrast(380%) contrast(50%) brightness(208%);
+  opacity: 0.9;
 }
