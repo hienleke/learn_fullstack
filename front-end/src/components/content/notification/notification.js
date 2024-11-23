@@ -20,9 +20,10 @@ const Notification = ({ children }) => {
     <div class='notification' >
           <div class='notification-text'>
     <p>
-    👉 Hiring remotely? <span class="hide-on-mobile">Reach <span>1,900,000+ remote workers</span> on the 🏆 #1 Remote Job Board</span></p>
-    <div className='button-nav button-nav-2'> <a href="#home" className="link">Post a remote job</a></div>
-    <div className='button-nav button-nav-1'> <a href="#home" className="link">Hide this</a></div>
+    <span>👉</span> Hiring remotely? <span class="hide-on-mobile">Reach <span>1,900,000+ remote workers</span> on the 🏆 #1 Remote Job Board</span></p>
+    <div class="button-notification">  <div className='button-nav button-nav-2'> <a href="#home" className="link">Post a remote job</a></div>
+    <div className='button-nav button-nav-1'> <a href="#home" className="link">Hide this</a></div></div>
+      
           </div>
           <div class='logos'>
             <p>trusted by</p>
